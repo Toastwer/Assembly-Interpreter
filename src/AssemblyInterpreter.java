@@ -269,35 +269,5 @@ public class AssemblyInterpreter {
                 default -> throw new IllegalStateException("Unexpected value: " + comparator);
             }
         }
-
-        public int val1() {
-            return val1;
-        }
-
-        public int val2() {
-            return val2;
-        }
-
-        @Override
-        public boolean equals(Object obj) {
-            if (obj == this) return true;
-            if (obj == null || obj.getClass() != this.getClass()) return false;
-            var that = (Comparison) obj;
-            return this.val1 == that.val1 &&
-                   this.val2 == that.val2;
-        }
-
-        @Override
-        public int hashCode() {
-            return Objects.hash(val1, val2);
-        }
-
-        @Override
-        public String toString() {
-            return "Comparison[" +
-                   "val1=" + val1 + ", " +
-                   "val2=" + val2 + ']';
-        }
-
     }
 }
