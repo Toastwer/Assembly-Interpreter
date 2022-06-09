@@ -1,3 +1,5 @@
+package solution;
+
 public class Solution {
 
     public static String interpret(final String input) {

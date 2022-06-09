@@ -1,13 +1,15 @@
-import org.junit.jupiter.api.Test;
+package test;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Test;
+import solution.Solution;
 
 class SolutionTest {
 
     @Test
     public void sampleTests() {
         for (int i = 0 ; i < expected.length ; i++) {
-            assertEquals(expected[i], Solution.interpret(programs[i]));
+            Assertions.assertEquals(expected[i], Solution.interpret(programs[i]));
         }
     }
 
